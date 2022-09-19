@@ -9,6 +9,10 @@
   margin: 4px;
 }
 
+.green {
+  background-color: greenyellow;
+}
+
 .blink {
   animation: blink 1s linear infinite;
 }
