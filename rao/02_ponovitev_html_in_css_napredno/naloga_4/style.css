@@ -1,0 +1,20 @@
+.door-wrapper {
+  display: flex;
+}
+
+.door {
+  background-color: brown;
+  width: 100px;
+  height: 160px;
+  margin: 4px;
+}
+
+.blink {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
