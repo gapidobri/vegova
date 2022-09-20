@@ -1,0 +1,4 @@
+
+<b><?= phpversion() ?></b>
+
+<?= phpinfo() ?>
