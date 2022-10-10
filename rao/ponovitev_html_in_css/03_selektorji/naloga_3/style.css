@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+#new {
+  display: flex;
+}
+
+#new > div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content {
+  margin-left: 8px;
+}
+
+.content img {
+  width: 100%;
+  border: 2px lightgrey solid;
+  border-radius: 16px;
+}
+
+img.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+post {
+  display: flex;
+  border-bottom: 1px #ddd solid;
+  padding: 16px;
+}
+
+post .name {
+  font-weight: bold;
+}
+
+post .name .tag {
+  color: #aaa;
+  font-weight: normal;
+}
+
+post .text {
+  margin-top: 4px;
+}
+
+post .content img {
+  margin-top: 10px;
+}

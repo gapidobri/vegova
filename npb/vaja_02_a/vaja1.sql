@@ -1,0 +1,56 @@
+
+CREATE DATABASE GlasbenaZbirka;
+
+CREATE DOMAIN Zvrst varchar(8)
+  CHECK (VALUE in ('pop', 'rok', 'klasika', 'jazz'));
+
+CREATE TABLE Avtor (
+  AvtorID INT         NOT NULL PRIMARY KEY,
+  Ime     VARCHAR(20) NOT NULL,
+  Priimek VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Posnetek (
+  PID       INT         NOT NULL PRIMARY KEY,
+  Naslov    VARCHAR(30) NOT NULL,
+  Genre     Zvrst       NOT NULL,
+  Trajanje  TIME        NOT NULL,
+  AvtorID   INT         NOT NULL,
+  FOREIGN KEY AvtorID REFERENCES Avtor(AvtorID)
+);
+
+CREATE TABLE CD (
+  CDID    INT           NOT NULL PRIMARY KEY,
+  Naslov  VARCHAR(30)   NOT NULL,
+  Cena    NUMERIC(2)    NOT NULL,
+  Opombe  VARCHAR(150),
+  Lastnik INT           NOT NULL,
+  FOREIGN KEY Lasting REFERENCES Lastnik(LID)
+);
+
+CREATE TABLE Vsebina (
+  CDID  INT NOT NULL,
+  PID   INT NOT NULL,
+  PRIMARY KEY (CDID, PID),
+  FOREIGN KEY CDID REFERENCES CD(CDID),
+  FOREIGN KEY PID REFERENCES Posnetek(PID)
+);
+
+CREATE TABLE Lastnik (
+  LID     INT         NOT NULL,
+  Ime     VARCHAR(20) NOT NULL,
+  Priimek VARCHAR(20) NOT NULL,
+  Tel     VARCHAR(20) NOT NULL,
+  EMail   VARCHAR(30) NOT NULL CHECK (EMail LIKE "%@%")
+);
+
+SHOW DATABASES;
+
+SHOW DOMAINS;
+
+ALTER TABLE CD
+  ADD Leto INT CHECK (Leto >= 1982);
+
+ALTER TABLE CD
+  ADD CONSTRAINT fk_lastnik
+    FOREIGN KEY Lastnik REFERENCES Lastnik(LID) ON DELETE CASCADE;
