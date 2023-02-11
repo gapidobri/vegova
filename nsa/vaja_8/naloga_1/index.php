@@ -25,17 +25,17 @@
 include 'podatki.php';
 include 'funkcije.php';
 
-// echo '<pre>';
+echo '<pre>';
 
-// echo 'Naloga a:<br>';
-// print_r(countColors($tab));
+echo 'Naloga a:<br>';
+print_r(countColors($tab));
 
-// echo '<br>Naloga b:<br>';
-// print_r(colorIndex($tab));
+echo '<br>Naloga b:<br>';
+print_r(colorIndex($tab));
 
-// echo '<br>Naloga c:<br>';
-// print_r(countColors2($tab));
+echo '<br>Naloga c:<br>';
+print_r(countColors2($tab));
 
-// echo '</pre>';
+echo '</pre>';
 
 horizontalPrint(countColors($tab));

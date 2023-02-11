@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Naloga 2</title>
+  </head>
+  <body>
+    <form action="submit.php" method="post">
+      <fieldset style="display: inline-block">
+        <legend>Podatki za polnenje tabel</legend>
+
+        <label for="spodnjaMeja">Spodnja meja</label>
+        <input type="number" name="spodnjaMeja" id="spodnjaMeja" required />
+        <br />
+
+        <label for="zgornjaMeja">Zgornja meja</label>
+        <input type="number" name="zgornjaMeja" id="zgornjaMeja" required />
+        <br />
+
+        <label for="steviloElementov">Število elementov</label>
+        <input
+          type="text"
+          name="steviloElementov"
+          id="steviloElementov"
+          pattern="^[0-9]*$"
+          min="20"
+          required
+        />
+        <br />
+
+        <label for="veckratnik">Večkratnik</label>
+        <input
+          type="text"
+          name="veckratnik"
+          id="veckratnik"
+          pattern="^[0-9]*$"
+          required
+        />
+        <br />
+
+        <label for="uredi">Uredi</label>
+        <input type="checkbox" name="uredi" id="uredi" />
+        <br />
+
+        <label for="barvaDeljiteljev">Barva deljiteljev</label>
+        <input type="color" name="barvaDeljiteljev" id="barvaDeljiteljev" />
+        <br />
+
+        <label for="barvaOstalih">Barva ostalih</label>
+        <input type="color" name="barvaOstalih" id="barvaOstalih" />
+        <br />
+
+        <input type="submit" value="Napolni" />
+      </fieldset>
+    </form>
+  </body>
+</html>

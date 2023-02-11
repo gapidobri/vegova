@@ -1,0 +1,14 @@
+services:
+  firebird:
+    image: jacobalberty/firebird
+    container_name: firebird
+    volumes:
+      - ./firebird-data:/firebird
+
+  mysql:
+    image: mariadb
+    container_name: mysql
+    environment:
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: true
+    volumes:
+      - ./mysql-data:/var/lib/mysql

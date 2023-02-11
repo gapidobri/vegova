@@ -35,6 +35,7 @@ function izpisi1($arr)
   }
   echo '</table>';
 }
+
 function izpisi2($arr)
 {
   echo '<table>';

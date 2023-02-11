@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Naloga 1</title>
+  </head>
+
+  <body>
+    <form id="form" action="submit.php" method="post">
+      <label for="vrstice">Število vrstic: </label>
+      <input
+        type="text"
+        name="vrstice"
+        id="vrstice"
+        pattern="^[0-9]*$"
+        value="6"
+        required
+      />
+      <br />
+
+      <label for="stolpci">Število stolpcev: </label>
+      <input
+        type="text"
+        name="stolpci"
+        id="stolpci"
+        pattern="^[0-9]*$"
+        value="6"
+        required
+      />
+      <br />
+
+      <label for="diagonala">Barva diagonale:</label>
+      <input
+        type="text"
+        name="diagonala"
+        id="diagonala"
+        pattern="^#(?:[0-9a-fA-F]{3}){1,2}$"
+        required
+      />
+      <br />
+
+      <label for="celice">Barva celic:</label>
+      <input
+        type="text"
+        name="celice"
+        id="celice"
+        pattern="^#(?:[0-9a-fA-F]{3}){1,2}$"
+        required
+      />
+      <br />
+
+      <input type="submit" value="Izriši" />
+    </form>
+  </body>
+</html>

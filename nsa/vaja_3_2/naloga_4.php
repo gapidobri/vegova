@@ -8,5 +8,3 @@
     $fontSize = 10 + 2 * $i;
     echo "<span style='font-size: ${fontSize}px'><$num</span>";
   }
-
-?>

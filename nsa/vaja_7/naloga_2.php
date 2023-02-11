@@ -123,7 +123,7 @@ $t2 = [];
 
 vpisi($t1);
 racunaj($t1, $t2);
-// izpis($t1, $t2);
+izpis($t1, $t2);
 
 izpis2($t1, $t2);
 

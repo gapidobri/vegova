@@ -25,7 +25,7 @@
 
 <?php
 
-include 'funkcije.php';
+require_once('funkcije.php');
 
 $arr = napolni();
 izpisi2($arr);

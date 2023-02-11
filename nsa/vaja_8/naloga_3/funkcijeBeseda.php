@@ -14,8 +14,8 @@ function split($str)
   $samoglasniki = "";
   $soglasnki = "";
 
-  foreach (str_split($str) as $key => $value) {
-    if (array_search($value, ['a', 'e', 'i', 'o', 'u'])) {
+  foreach (str_split($str) as $value) {
+    if (in_array($value, ['a', 'e', 'i', 'o', 'u'])) {
       $samoglasniki .= $value;
     } else {
       $soglasnki .= $value;
@@ -27,13 +27,17 @@ function split($str)
 
   echo "Samoglasniki ($samLen): $samoglasniki<br>";
   echo "Soglasniki ($sogLen): $soglasnki<br>";
+}
 
+function soglasnik($str)
+{
   for ($i = ord('a'); $i < ord('z'); $i++) {
-    foreach (str_split($soglasnki) as $key => $value) {
-      if ($value === chr($i)) {
+    foreach (str_split($str) as $value) {
+      if (!in_array($value, ['a', 'e', 'i', 'o', 'u'])) {
         echo "Prvi soglasnik: $value";
         return;
       }
     }
   }
+  echo "Prvi soglasnik: NA";
 }

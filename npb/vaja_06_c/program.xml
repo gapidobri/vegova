@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="primer2sola">
+        <table_structure name="program">
+                <field Field="ProgramID" Type="int(11)" Null="NO" Key="PRI" Extra="" Comment="" />
+                <field Field="ImePrograma" Type="char(20)" Null="NO" Key="" Extra="" Comment="" />
+                <field Field="Opis" Type="varchar(100)" Null="YES" Key="" Default="NULL" Extra="" Comment="" />
+                <key Table="program" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="ProgramID" Collation="A" Cardinality="5" Null="" Index_type="BTREE" Comment="" Index_comment="" Ignored="NO" />
+                <options Name="program" Engine="MyISAM" Version="10" Row_format="Dynamic" Rows="5" Avg_row_length="36" Data_length="180" Max_data_length="281474976710655" Index_length="2048" Data_free="0" Create_time="2023-02-11 10:37:18" Update_time="2023-02-11 10:37:18" Collation="utf8mb3_slovenian_ci" Create_options="" Comment="" Max_index_length="288230376151710720" Temporary="N" />
+        </table_structure>
+        <table_data name="program">
+        <row>
+                <field name="ProgramID">1</field>
+                <field name="ImePrograma">splosna gimnazija</field>
+                <field name="Opis">nic pametnega</field>
+        </row>
+        <row>
+                <field name="ProgramID">2</field>
+                <field name="ImePrograma">tehnicna gimnazija</field>
+                <field name="Opis">no comment</field>
+        </row>
+        <row>
+                <field name="ProgramID">3</field>
+                <field name="ImePrograma">racunalniski tehnik</field>
+                <field name="Opis">zakon</field>
+        </row>
+        <row>
+                <field name="ProgramID">4</field>
+                <field name="ImePrograma">gostinski tehnik</field>
+                <field name="Opis">ok</field>
+        </row>
+        <row>
+                <field name="ProgramID">5</field>
+                <field name="ImePrograma">komercialist</field>
+                <field name="Opis">lopov</field>
+        </row>
+        </table_data>
+</database>
+</mysqldump>
